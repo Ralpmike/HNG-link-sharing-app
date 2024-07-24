@@ -67,7 +67,7 @@ export default function SignupForm() {
           <div className="relative">
             <PiEnvelopeSimpleFill size={20} color="#737373" className="absolute inset-x-1 left-4 bottom-[16px]" />
             <input
-              className={`w-full ${errors.email ? "border-red" : "border-gray-300"} text-[1rem] py-[.75rem] pl-[45px] outline-none max-w-[396px] border-[1px] rounded-[8px] hover:border-primary hover:shadow-Inputshadow`}
+              className={`w-full ${errors?.email ? "border-red" : "border-gray-300"} text-[1rem] py-[.75rem] pl-[45px] outline-none max-w-[396px] border-[1px] rounded-[8px] hover:border-primary hover:shadow-Inputshadow`}
               placeholder="eg. alex@email.com"
               type="email"
               {...register('email')}
