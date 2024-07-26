@@ -18,15 +18,10 @@ const CustomizeLinks = () => {
           <p className="leading-[1.5rem] text-dark-light text-[16px] font-normal">Add/edit/remove links below and then share all your profiles with the world!</p>
         </div>
         <div className='flex flex-col gap-6 '>
-          <AddLink handleClick={() => router.push('')} />
-          <LinkForm newLink={{
-            platform: '',
-            url: ''
-          }} setNewLink={function (link: { platform: string; url: string; }): void {
-            throw new Error('Function not implemented.');
-          }} handleAddLink={function (): void {
+          <AddLink onClick={function (): void {
             throw new Error('Function not implemented.');
           }} />
+
         </div>
       </div>
       <div>

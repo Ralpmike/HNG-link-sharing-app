@@ -11,10 +11,7 @@ export default function RootLayout({
       <Navbar />
       <div className="flex justify-between gap-6 px-6">
         <ProfilePreview />
-
         {children}
-
-
       </div>
     </main>
   );

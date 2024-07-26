@@ -52,7 +52,7 @@ export default function SignupForm() {
   };
 
   return (
-    <div className="w-full flex-col md:p-10 flex gap-[32px] max-w-[496px] md:gap-10 bg-white rounded-lg">
+    <div className="w-full flex-col md:p-10 flex gap-[32px]  max-w-[496px] md:gap-10 bg-white rounded-lg">
       <div className="flex flex-col gap-2">
         <h3 className="text-[24px] text-heading-m text-black font-bold">Create account</h3>
         <p>Let&apos;s get you started sharing your links!</p>
@@ -67,7 +67,7 @@ export default function SignupForm() {
           <div className="relative">
             <PiEnvelopeSimpleFill size={20} color="#737373" className="absolute inset-x-1 left-4 bottom-[16px]" />
             <input
-              className={`w-full ${errors?.email ? "border-red" : "border-gray-300"} text-[1rem] py-[.75rem] pl-[45px] outline-none max-w-[396px] border-[1px] rounded-[8px] hover:border-primary hover:shadow-Inputshadow`}
+              className={`w-full ${errors?.email ? "border-red" : "border-gray-300"} text-[1rem] py-[.75rem] pl-[45px] outline-none max-w-[496px] border-[1px] rounded-[8px] hover:border-primary hover:shadow-Inputshadow`}
               placeholder="eg. alex@email.com"
               type="email"
               {...register('email')}
@@ -80,7 +80,7 @@ export default function SignupForm() {
           <div className="relative">
             <PiLockKeyFill size={20} color="#737373" className="absolute inset-x-1 left-4 bottom-[16px]" />
             <input
-              className={`w-full ${errors.password ? "border-red" : "border-gray-300"} text-[1rem] py-[.75rem] pl-[45px] outline-none max-w-[396px] border-[1px] rounded-[8px] hover:border-primary hover:shadow-Inputshadow`}
+              className={`w-full ${errors.password ? "border-red" : "border-gray-300"} text-[1rem] py-[.75rem] pl-[45px] outline-none max-w-[496px] border-[1px] rounded-[8px] hover:border-primary hover:shadow-Inputshadow`}
               type="password"
               placeholder="At least 8 characters"
               {...register('password')}
@@ -91,21 +91,20 @@ export default function SignupForm() {
         <div className="flex flex-col gap-1">
           <label htmlFor="confirmPassword">Confirm password</label>
           <div
-            className={`w-full ${errors.confirmPassword ? "border-red" : "border-gray-300"} flex items-center justify-between text-[1rem] py-[.75rem] pl-[1rem] outline-none max-w-[396px] border-[1px] rounded-[8px] hover:border-primary hover:shadow-Inputshadow`}
+            className="relative"
           >
-            <div className='flex items-center'>
+            <div className='flex items-center gap-2'>
               <div>
-                <PiLockKeyFill size={20} color="#737373" />
+                <PiLockKeyFill size={20} color="#737373" className="absolute inset-x-1 left-4 bottom-[16px]" />
               </div>
               <input
-                className='w-min'
-                // className={`w-full ${errors.confirmPassword ? "border-red" : "border-gray-300"} text-[1rem] py-[.75rem] pl-[45px] outline-none max-w-[396px] border-[1px] rounded-[8px] hover:border-primary hover:shadow-Inputshadow`}
+                className={`w-full ${errors.password ? "border-red" : "border-gray-300"} text-[1rem] py-[.75rem] pl-[45px] outline-none max-w-[496px] border-[1px] rounded-[8px] hover:border-primary hover:shadow-Inputshadow`}
                 type="password"
                 placeholder="At least 8 characters"
-                {...register('confirmPassword')}
+                {...register('password')}
               />
             </div>
-            {errors.confirmPassword && <div className="text-red text-[.75rem] border-2 text-right shrink-[1]">{errors.confirmPassword.message}</div>}
+            {errors.confirmPassword && <div className="text-red text-[.75rem] absolute right-3 bottom-[13px]">{errors.confirmPassword.message}</div>}
           </div>
         </div>
         <p className="text-gray-500 text-[.875rem]">Password must contain at least 8 characters</p>

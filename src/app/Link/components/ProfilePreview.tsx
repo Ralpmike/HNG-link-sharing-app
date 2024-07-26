@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ProfilePreview = () => {
   return (
-    <div className="border-2 max-w-[560px] bg-white h-[834px] w-full flex justify-center items-center">
+    <div className=" max-w-[560px] bg-white h-[834px] w-full flex justify-center items-center">
       <div className="border-[1px] px-[11px] py-[5px] rounded-[60px] max-w-[306px] w-full border-dark-light ">
         <div className="w-full  max-w-[285px] h-[631px] mx-auto border-dark-light relative rounded-lg flex flex-col items-center justify-center">
           <Image
