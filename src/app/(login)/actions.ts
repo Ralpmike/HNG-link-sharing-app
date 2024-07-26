@@ -28,7 +28,7 @@ export async function login(formData: LoginProps): Promise<AuthResponse> {
   }
 
   revalidatePath('/', 'layout')
-  redirect('/')
+  redirect('/Link')
 }
 
 export async function signup(formData: LoginProps): Promise<AuthResponse> {

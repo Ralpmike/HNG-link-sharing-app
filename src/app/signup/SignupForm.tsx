@@ -108,7 +108,7 @@ export default function SignupForm() {
           </div>
         </div>
         <p className="text-gray-500 text-[.875rem]">Password must contain at least 8 characters</p>
-        <button type="submit" className="bg-primary w-full hover:bg-primary-light hover:shadow-btnshadow max-w-[396px] p-[11px] rounded-lg text-[18px] text-white" disabled={loading}>
+        <button type="submit" className="bg-primary w-full hover:bg-primary-light hover:shadow-btnshadow max-w-[496px] p-[11px] rounded-lg text-[18px] text-white" disabled={loading}>
           {loading ? 'Creating account...' : 'Create new account'}
         </button>
         <Link href="/">
