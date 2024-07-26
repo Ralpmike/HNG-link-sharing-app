@@ -93,7 +93,7 @@ export default function SignupForm() {
           <div
             className="relative"
           >
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center'>
               <div>
                 <PiLockKeyFill size={20} color="#737373" className="absolute inset-x-1 left-4 bottom-[16px]" />
               </div>
